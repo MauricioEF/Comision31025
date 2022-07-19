@@ -1,0 +1,13 @@
+{{#if hasUsers}}
+{{#each users}}
+    <div>
+        <p>{{this.first_name}}</p>
+        <p>{{this.last_name}}</p>
+    </div>
+{{/each}}
+
+{{else}}
+<h1>No hay usuarios disponibles</h1>
+{{/if}}
+
+<script src="js/users.js"></script>
