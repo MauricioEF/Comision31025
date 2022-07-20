@@ -1,0 +1,18 @@
+.petPanel{
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.petCard{
+    width:250px;
+    height: 300px;
+    border:1px solid black;
+    text-align: center;
+    border-radius:10px;
+}
+.petCard img{
+    width:200px;
+    height:200px;
+    object-fit:cover;
+    border-radius:10px;
+}

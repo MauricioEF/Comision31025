@@ -1,0 +1,13 @@
+<head>
+    <link rel="stylesheet" href="css/pets.css">
+</head>
+<h1 style="text-align:center;">Mascotas</h1>
+<div class="petPanel">
+    {{#each pets}}
+    <div class="petCard">
+        <p>{{this.name}}</p>
+        <p>{{this.specie}}</p>
+        <img src="http://localhost:8080/img/{{this.image}}">
+    </div>
+    {{/each}}
+</div>

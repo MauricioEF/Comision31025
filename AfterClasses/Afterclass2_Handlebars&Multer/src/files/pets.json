@@ -1,0 +1,18 @@
+[
+	{
+		"name": "Patitas",
+		"specie": "Perro",
+		"age": "1",
+		"image": "1658285363087-dog.jpg",
+		"id": 1,
+		"isAdopted": false
+	},
+	{
+		"name": "Aletas",
+		"specie": "Pez",
+		"age": "2",
+		"image": "1658286172456-VacaDelfin.jpg",
+		"id": 2,
+		"isAdopted": false
+	}
+]
