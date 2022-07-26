@@ -1,0 +1,27 @@
+<form id="testForm">
+    <label>Nombre</label>
+    <input name="first_name">
+    <label>Apellido</label>
+    <input name="last_name">
+    <label>Edad</label>
+    <input name="age">
+    <input type="submit">
+</form>
+<%- include('./partials/history', {users}) %> 
+
+<script>
+    let form  = document.getElementById('testForm');
+    form.addEventListener('submit',evt=>{
+        evt.preventDefault();
+        let data = new FormData(form)
+        let obj = {};
+        data.forEach((value,key)=>obj[key]=value);
+        fetch('/users',{
+            method:'POST',
+            body:JSON.stringify(obj),
+            headers:{
+                "Content-Type":"application/json"
+            }
+        })
+    })
+</script>
