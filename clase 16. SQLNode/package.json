@@ -1,0 +1,19 @@
+{
+  "name": "clase16sqlnode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "knex": "^2.2.0",
+    "mysql": "^2.18.1",
+    "sqlite3": "^5.0.11"
+  }
+}
