@@ -3,7 +3,7 @@ import booksService from './models/Books.js';
 import petService from './models/Pets.js';
 import usersService from './models/Users.js';
 
-const connection = mongoose.connect('mongodb+srv://CoderUser:123@codercluster.w5adegs.mongodb.net/afterBase?retryWrites=true&w=majority')
+const connection = mongoose.connect('URL DE MONGUITO AQUI')
 
 const environment = async() =>{
     // const result = await usersService.insertMany([
