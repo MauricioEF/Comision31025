@@ -6,7 +6,7 @@ import sessionsRouter from './routes/sessions.router.js'
 import mongoose from 'mongoose';
 
 const app = express();
-const connection = mongoose.connect("mongodb+srv://CoderUser:123@codercluster.w5adegs.mongodb.net/Base31025?retryWrites=true&w=majority")
+const connection = mongoose.connect("URL DE MONGUITO AQUÍ")
 
 app.use(express.json());
 app.use(express.static(__dirname+'/public'))
