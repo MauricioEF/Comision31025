@@ -1,0 +1,13 @@
+{
+  "type": "module",
+  "scripts": {
+    "dev":"nodemon ./indexEnvironment.js DEV",
+    "start":"node ./indexEnvironment.js PROD"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "minimist": "^1.2.6",
+    "yargs": "^17.5.1"
+  }
+}
