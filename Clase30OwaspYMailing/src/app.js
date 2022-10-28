@@ -7,7 +7,7 @@ import mongoose from 'mongoose';
 
 
 const app = express();
-const connection = mongoose.connect('mongodb+srv://CoderUser:123@codercluster.w5adegs.mongodb.net/recuperacionContrasena?retryWrites=true&w=majority')
+const connection = mongoose.connect('MONGO URL')
 
 app.engine('handlebars',handlebars.engine());
 app.set('views',__dirname+'/views')
