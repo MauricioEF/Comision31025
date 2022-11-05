@@ -1,0 +1,20 @@
+<div>
+    <div class="navbar">
+        <ul>
+            {{#each routes}}
+            <li><a href={{this.route}}>{{this.label}}</a></li>
+            {{/each}}
+        </ul>
+    </div>
+
+    <div class="artworksPanel">
+        {{#each artworks}}
+        <div class="artworkCard">
+            <p>{{this.title}}</p>
+            <p>{{this.author}}</p>
+            <p>{{this.price}}</p>
+            <img src={{this.image}}>
+        </div>
+        {{/each}}
+    </div>
+</div>
