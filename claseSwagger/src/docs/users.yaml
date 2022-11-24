@@ -1,0 +1,84 @@
+components:
+  requestBodies:
+    nuevoUsuario:
+      type: object
+      properties:
+        name:
+          type: String
+          description: Nombre completo del usuario
+        email:
+          type: String
+          description: Email único del usuario.
+        password:
+          type: String
+          description: Contraseña del usuario sin hashear
+      example:
+        name: Samuel Mayo
+        email: correosamu@correo.com
+        password: 123
+  schemas:
+    User:
+      type: object
+      properties:
+        _id:
+          type: ObjectId
+          description: Id autogenerado de mongo
+        name:
+          type: String
+          description: Nombre completo del usuarios
+        email:
+          type: String
+          description: Correo del usuario, este campo es único
+        password:
+          type: String
+          description: Contraseña Hasheada del usuario.
+      example:
+        _id: ObjectId("asz87/393940")
+        name: Diego Londoño
+        email: correoDiego@correo.com
+        password: 1231ascxz33fdqfmased
+paths:
+  /api/users/:
+    get:
+      summary: Obtiene todos los usuarios de la base de datos
+      tags:
+        - Users
+      responses:
+        "200":
+          description: Los usuarios se obtuvieron correctamente
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
+    post:
+      summary: Crea un nuevo usuario
+      tags:
+        - Users
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/requestBodies/nuevoUsuario"
+      responses:
+        "200":
+          description: "El usuario se insertó correctamente"
+        "400":
+          description: "El usuario ya existía en la base de datos o se enviaron campos incompletos"
+        "500":
+          description: "Error interno de inserción a la base de datos"
+  /api/users/{uid}:
+    delete:
+      summary: Elimina un usuario dado
+      tags:
+        - Users
+      parameters:
+      - name: uid
+        in: path
+        required: true
+        description: define el id del usuario guardado en mongo
+        schema:
+          type: string
+      
